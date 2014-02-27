@@ -10,7 +10,7 @@
 #include <FL/fl_draw.H>
 #include <FL/Fl_Image.H>
 #include "Point.h"
-#include "../../std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 namespace Graph_lib {
 
