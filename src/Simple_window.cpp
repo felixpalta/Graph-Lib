@@ -25,7 +25,7 @@ bool Simple_window::wait_for_button()
 {
     show();
     button_pushed = false;
-#if 1
+#if 0
     // Simpler handler
     while (!button_pushed) Fl::wait();
     Fl::redraw();
