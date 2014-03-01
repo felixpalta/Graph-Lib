@@ -112,8 +112,9 @@ private:
 //------------------------------------------------------------------------------
 
 template<class T> class Vector_ref {
-    vector<T*> v;
-    vector<T*> owned;
+    vector<T*> v;	// pointers to those members, that are stored outside of class
+    vector<T*> owned;	// pointers to those members, that were allocated while calling push_back()
+// therefore v.size() >= owned.size()
 public:
     Vector_ref() {}
     Vector_ref(T& a) { push_back(a); }
