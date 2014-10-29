@@ -209,12 +209,12 @@ inline void simple_error(string s)	// write ``error: s’’ and exit program
 #undef min
 #undef max
 
-#include<iomanip>
-inline ios_base& general(ios_base& b)	// to augment fixed and scientific
-{
-	b.setf(ios_base::fmtflags(0),ios_base::floatfield);
-	return b;
-}
+//#include<iomanip>
+//inline ios_base& general(ios_base& b)	// to augment fixed and scientific
+//{
+//    b.setf(ios_base::fmtflags(0),ios_base::floatfield);
+//    return b;
+//}
 
 // run-time checked narrowing cast (type conversion):
 template<class R, class A> R narrow_cast(const A& a)

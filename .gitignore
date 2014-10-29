@@ -1,6 +1,9 @@
+Makefile
 /ReadMe.txt
 /Debug
 /Release
 /*.suo
 /*.filters
-/*.user
+/*.user*
+*.o
+*.so*

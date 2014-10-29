@@ -7,7 +7,7 @@
 #include <FL/Fl_GIF_Image.H>
 #include <FL/Fl_JPEG_Image.H>
 #include "Graph.h"
-
+#include <string.h>
 //------------------------------------------------------------------------------
 
 namespace Graph_lib {
@@ -61,7 +61,7 @@ void Shape::draw() const
 
 void Shape::move(int dx, int dy)    // move the shape +=dx and +=dy
 {
-    for (int i = 0; i<points.size(); ++i) {
+    for (unsigned i = 0; i<points.size(); ++i) {
         points[i].x+=dx;
         points[i].y+=dy;
     }
@@ -408,7 +408,7 @@ Suffix::Encoding get_encoding(const string& s)
 
     for (int i = 0, n = ARRAY_SIZE(smap); i < n; i++)
     {
-        int len = strlen(smap[i].extension);
+        unsigned len = strlen(smap[i].extension);
 
         if (s.length() >= len && s.substr(s.length()-len, len) == smap[i].extension)
             return smap[i].suffix;

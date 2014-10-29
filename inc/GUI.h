@@ -120,7 +120,7 @@ namespace Graph_lib {
 
         void attach(Window& win)    // attach all buttons
         {
-            for (int i=0; i<selection.size(); ++i) win.attach(selection[i]);
+            for (unsigned i=0; i<selection.size(); ++i) win.attach(selection[i]);
             own = &win;
         }
 

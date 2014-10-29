@@ -107,4 +107,4 @@ int Menu::attach(Button* p)
 
 //------------------------------------------------------------------------------
 
-}; // of namespace Graph_lib
+} // of namespace Graph_lib

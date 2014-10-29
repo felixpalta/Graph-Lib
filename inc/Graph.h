@@ -52,8 +52,9 @@ struct Color {
     char visibility() const { return v; } 
     void set_visibility(Transparency vv) { v=vv; }
 private:
-    char v;    // invisible and visible for now
     Fl_Color c;
+    unsigned char v;    // invisible and visible for now
+
 };
 
 //------------------------------------------------------------------------------
@@ -64,7 +65,7 @@ struct Line_style {
         dash=FL_DASH,              // - - - -
         dot=FL_DOT,                // ....... 
         dashdot=FL_DASHDOT,        // - . - . 
-        dashdotdot=FL_DASHDOTDOT,  // -..-..
+        dashdotdot=FL_DASHDOTDOT  // -..-..
     };
 
     Line_style(Line_style_type ss) :s(ss), w(0) { }
@@ -159,7 +160,7 @@ public:
     T& operator[](int i) { return *v[i]; }
     const T& operator[](int i) const { return *v[i]; }
 
-    int size() const { return v.size(); }
+    unsigned size() const { return v.size(); }
 
 private:	// prevent copying
 	Vector_ref(const Vector<T>&);
@@ -235,8 +236,9 @@ struct Rectangle : Shape {
     int height() const { return h; }
     int width() const { return w; }
 private:
-    int h;    // height
     int w;    // width
+    int h;    // height
+
 };
 
 //------------------------------------------------------------------------------
